@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PrabhuSwami Cab & Taxi Service | Taxi Service in Mumbai, Navi Mumbai & Maharashtra</title>
+
+<meta name="description" content="Book reliable taxi services in Mumbai, Navi Mumbai, Pune, Nashik and across Maharashtra. Airport transfers, local cabs, outstation taxis, Ertiga and Innova Crysta rentals.">
+
+<meta name="keywords" content="Taxi Service Mumbai, Cab Service Navi Mumbai, Airport Taxi Mumbai, Outstation Cab Maharashtra, Pune Taxi Service, Nashik Cab Service, Innova Crysta Rental, Ertiga Cab, One Way Taxi Maharashtra">
+<meta property="og:title" content="PrabhuSwami Cab & Taxi Service">
+<meta property="og:description" content="Reliable Taxi Service Across Maharashtra">
+<meta property="og:image" content="logo.png">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="logo.png">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#fff;
+    color:#333;
+    line-height:1.6;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+header{
+    background:#111;
+    padding:15px 0;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:#f5b400;
+    font-size:24px;
+    font-weight:700;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:500;
+}
+
+.hero{
+    position:relative;
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#fff;
+    background:
+    linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+    url('https://images.pexels.com/photos/1007410/pexels-photo-1007410.jpeg');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.65);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.hero-logo{
+    width:180px;
+    background:#fff;
+    padding:10px;
+    border-radius:12px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+.hero-buttons{
+    margin-top:30px;
+}
+
+.btn-call,
+.btn-whatsapp{
+    display:inline-block;
+    padding:14px 30px;
+    margin:10px;
+    border-radius:40px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.btn-call{
+    background:#f5b400;
+    color:#000;
+}
+
+.btn-whatsapp{
+    background:#25D366;
+    color:#fff;
+}
+
+.hero h1{
+    font-size:58px;
+    font-weight:700;
+    margin-bottom:20px;
+    text-shadow:2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.hero p{
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+.cities{
+    color:#f5b400;
+    font-weight:600;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:34px;
+}
+
+.hero p{
+    font-size:16px;
+}
+}
+
+.booking-section{
+    padding:60px 0;
+    background:#111;
+}
+
+.booking-section h2{
+    color:#fff;
+    text-align:center;
+    margin-bottom:30px;
+}
+
+#bookingForm{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+
+#bookingForm input,
+#bookingForm select{
+    padding:15px;
+    border:none;
+    border-radius:8px;
+}
+
+#bookingForm button{
+    background:#f5b400;
+    color:#000;
+    border:none;
+    padding:15px;
+    font-weight:600;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+#bookingForm button:hover{
+    opacity:0.9;
+}
+
+.section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    color:#111;
+    font-size:36px;
+}
+
+.about{
+    text-align:center;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.card h3{
+    color:#f5b400;
+    margin-bottom:15px;
+}
+
+.vehicle-img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+.card{
+    overflow:hidden;
+}
+
+.pricing{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.price-box{
+    background:#111;
+    color:#fff;
+    padding:35px;
+    border-radius:15px;
+}
+
+.price-box h3{
+    color:#f5b400;
+    margin-bottom:20px;
+}
+
+.price{
+    font-size:35px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+ul.features{
+    list-style:none;
+}
+
+ul.features li{
+    margin-bottom:10px;
+}
+
+.routes{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.routes div{
+    background:#f5b400;
+    color:#111;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    font-weight:600;
+}
+
+.why{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.why-box{
+    text-align:center;
+    padding:25px;
+    background:#fafafa;
+    border-radius:15px;
+}
+
+.faq-item{
+    background:#f7f7f7;
+    padding:20px;
+    margin-bottom:15px;
+    border-radius:10px;
+}
+
+.contact{
+    background:#111;
+    color:#fff;
+    text-align:center;
+}
+
+.contact h2{
+    color:#f5b400;
+}
+
+.contact a{
+    color:#f5b400;
+    text-decoration:none;
+}
+
+footer{
+    background:#000;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+}
+
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    width:60px;
+    height:60px;
+    background:#25D366;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 4px 15px rgba(0,0,0,0.3);
+    z-index:9999;
+    transition:0.3s;
+}
+
+.whatsapp:hover{
+    transform:scale(1.1);
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:32px;
+}
+
+nav{
+    flex-direction:column;
+}
+
+nav ul{
+    margin-top:15px;
+}
+
+nav ul li{
+    margin:0 10px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container">
+<nav>
+<div style="display:flex;align-items:center;gap:12px;">
+
+    <img src="logo.png"
+         alt="PrabhuSwami Cab & Taxi Service Logo"
+         style="height:60px;width:auto;background:#fff;padding:4px;border-radius:8px;">
+
+    <div>
+        <h2 style="color:#f5b400;margin:0;font-size:26px;line-height:1;">
+            PrabhuSwami
+        </h2>
+        <span style="color:#fff;font-size:14px;">
+            Cab & Taxi Service
+        </span>
+    </div>
+
+</div>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#pricing">Pricing</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<section class="hero">
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+        <img src="logo.png" class="hero-logo" alt="PrabhuSwami Cab & Taxi Service">
+
+        <h1>Reliable Cab Service Across Maharashtra</h1>
+
+        <p>
+            Local Taxi • Airport Transfer • Outstation Cab • One Way • Round Trip
+        </p>
+
+        <p class="cities">
+            Mumbai | Navi Mumbai | Pune | Nashik | Chhatrapati Sambhajinagar
+        </p>
+
+        <div class="hero-buttons">
+            <a href="tel:+917028706290" class="btn-call">
+                📞 Call Now
+            </a>
+
+            <a href="https://wa.me/917028706290" class="btn-whatsapp" target="_blank">
+                Book on WhatsApp
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section class="booking-section">
+    <div class="container">
+
+        <h2>Book Your Cab</h2>
+
+        <form id="bookingForm">
+
+            <input type="text" id="name" placeholder="Your Name" required>
+
+            <input type="tel" id="mobile" placeholder="Mobile Number" required>
+
+            <input type="text" id="pickup" placeholder="Pickup Location" required>
+
+            <input type="text" id="drop" placeholder="Drop Location" required>
+
+            <input type="date" id="date" required>
+
+            <select id="vehicle" required>
+                <option value="">Select Vehicle</option>
+                <option>Sedan</option>
+                <option>Ertiga</option>
+                <option>Innova Crysta</option>
+            </select>
+
+            <button type="submit">
+                Send Enquiry
+            </button>
+
+        </form>
+
+    </div>
+</section>
+
+<section id="about" class="section">
+<div class="container about">
+
+<div class="section-title">
+<h2>About Us</h2>
+</div>
+
+<p>
+PrabhuSwami Cab & Taxi Service provides affordable and professional taxi services across Maharashtra.
+We offer local cabs, airport transfers, outstation taxi services, one-way trips, round trips, and corporate travel.
+Serving Mumbai, Navi Mumbai, Pune, Nashik, Chhatrapati Sambhajinagar and nearby cities.
+</p>
+
+</div>
+</section>
+
+<section id="services" class="section" style="background:#f8f8f8;">
+<div class="container">
+
+<div class="section-title">
+<h2>Our Services</h2>
+</div>
+
+<div class="services">
+
+<div class="card">
+<h3>Local Taxi Service</h3>
+<p>Comfortable local cab service for daily travel and business meetings.</p>
+</div>
+
+<div class="card">
+<h3>Airport Pickup & Drop</h3>
+<p>On-time airport transfers across Maharashtra.</p>
+</div>
+
+<div class="card">
+<h3>Outstation Taxi</h3>
+<p>Affordable outstation trips with experienced drivers.</p>
+</div>
+
+<div class="card">
+<h3>Corporate Travel</h3>
+<p>Professional transportation solutions for businesses.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="section" id="fleet">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Our Fleet</h2>
+            <p>Choose the perfect vehicle for your journey.</p>
+        </div>
+
+        <div class="services">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70" alt="Sedan Cab" class="vehicle-img">
+                <h3>Sedan Cab</h3>
+                <p>Comfortable and affordable for local and airport travel.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://imgd.aeplcdn.com/664x374/n/cw/ec/115777/ertiga-exterior-right-front-three-quarter-5.jpeg" alt="Ertiga Cab" class="vehicle-img">
+                <h3>SUV Ertiga</h3>
+                <p>Perfect for family trips and outstation travel.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://stimg.cardekho.com/images/carexteriorimages/930x620/Toyota/Innova-Crysta/8199/1606212255498/front-left-side-47.jpg" alt="Innova Crysta Cab" class="vehicle-img">
+                <h3>Innova Crysta</h3>
+                <p>Premium SUV for corporate and long-distance journeys.</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section id="pricing" class="section">
+<div class="container">
+
+<div class="section-title">
+<h2>Cab Packages</h2>
+</div>
+
+<div class="pricing">
+
+<div class="price-box">
+<h3>Sedan Cab</h3>
+<div class="price">₹2,500</div>
+<ul class="features">
+<li>8 Hours / 80 KM</li>
+<li>Toll & Parking Extra</li>
+<li>Local Service</li>
+<li>Airport Transfer</li>
+</ul>
+</div>
+
+<div class="price-box">
+<h3>SUV Ertiga</h3>
+<div class="price">₹3,000</div>
+<ul class="features">
+<li>8 Hours / 80 KM</li>
+<li>₹16 Per KM Outstation</li>
+<li>Driver Allowance ₹400/Day</li>
+<li>Toll & Parking Extra</li>
+</ul>
+</div>
+
+<div class="price-box">
+<h3>Innova Crysta</h3>
+<div class="price">₹4,000</div>
+<ul class="features">
+<li>8 Hours / 80 KM</li>
+<li>₹22 Per KM Outstation</li>
+<li>Driver Allowance ₹500/Day</li>
+<li>Toll & Parking Extra</li>
+</ul>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="section route-section">
+
+<div class="container">
+
+<h2>Popular Routes</h2>
+
+<div class="routes">
+
+<div>Mumbai → Pune </div>
+
+<div>Mumbai → Nashik </div>
+
+<div>Mumbai → Shirdi </div>
+
+<div>Mumbai → Lonavala </div>
+
+<div>Pune → Nashik </div>
+
+<div>Pune → Shirdi </div>
+
+<div>Mumbai Airport </div>
+
+<div>Navi Mumbai Airport </div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section" style="background:#f8f8f8;">
+<div class="container">
+
+<div class="section-title">
+<h2>Why Choose Us?</h2>
+</div>
+
+<div class="why">
+
+<div class="why-box">
+<h3>Professional Drivers</h3>
+<p>Experienced and verified drivers.</p>
+</div>
+
+<div class="why-box">
+<h3>Clean Vehicles</h3>
+<p>Well-maintained and sanitized fleet.</p>
+</div>
+
+<div class="why-box">
+<h3>Affordable Pricing</h3>
+<p>Transparent pricing with no hidden charges.</p>
+</div>
+
+<div class="why-box">
+<h3>24/7 Support</h3>
+<p>Quick booking assistance anytime.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section class="section faq">
+
+<div class="container">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-item">
+<h3>Do you provide airport pickup and drop?</h3>
+<p>Yes, airport taxi service is available across Maharashtra.</p>
+</div>
+
+<div class="faq-item">
+<h3>Do you offer one-way cabs?</h3>
+<p>Yes, one-way and round-trip taxi services are available.</p>
+</div>
+
+<div class="faq-item">
+<h3>Can I book an Innova Crysta?</h3>
+<p>Yes, subject to availability.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="section contact">
+<div class="container">
+
+<h2>Contact Us</h2>
+
+<br>
+
+<p>
+<strong>Phone:</strong>
+<a href="tel:+917028706290">+91 7028706290</a>
+</p>
+
+<p><strong>Email:</strong> Kishordhane90@gmail.com</p>
+
+<p><strong>Service Area:</strong> Mumbai, Navi Mumbai, Pune, Nashik, Sambhajinagar & All Maharashtra</p>
+
+<br>
+
+<a href="https://wa.me/917028706290">Book on WhatsApp</a>
+
+</div>
+</section>
+
+<footer>
+    <p>
+        © 2026 PrabhuSwami Cab & Taxi Service. All Rights Reserved.
+    </p>
+
+    <p style="margin-top:10px;font-size:14px;">
+        Developed by
+        <a href="https://webinor.tech"
+           target="_blank"
+           style="color:#f5b400;text-decoration:none;font-weight:600;">
+           Webinor
+        </a>
+    </p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/917028706290" target="_blank" aria-label="WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 24 24">
+        <path d="M20.52 3.48A11.86 11.86 0 0 0 12.07 0C5.5 0 .16 5.34.16 11.91c0 2.1.55 4.15 1.6 5.96L0 24l6.32-1.66a11.9 11.9 0 0 0 5.75 1.47h.01c6.57 0 11.91-5.34 11.91-11.91 0-3.18-1.24-6.17-3.47-8.42zm-8.45 18.3h-.01a9.9 9.9 0 0 1-5.05-1.39l-.36-.21-3.75.99 1-3.65-.24-.38a9.88 9.88 0 0 1-1.52-5.23c0-5.47 4.45-9.92 9.93-9.92 2.65 0 5.14 1.03 7.01 2.91a9.85 9.85 0 0 1 2.9 7c0 5.48-4.45 9.93-9.91 9.93zm5.44-7.45c-.3-.15-1.77-.88-2.04-.98-.27-.1-.47-.15-.67.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.53.08-.8.38-.28.3-1.06 1.04-1.06 2.54s1.08 2.94 1.23 3.14c.15.2 2.12 3.23 5.13 4.53.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.41.25-.69.25-1.28.18-1.41-.08-.13-.27-.2-.57-.35z"/>
+    </svg>
+</a>
+
+<script>
+document.getElementById("bookingForm").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let mobile = document.getElementById("mobile").value;
+    let pickup = document.getElementById("pickup").value;
+    let drop = document.getElementById("drop").value;
+    let date = document.getElementById("date").value;
+    let vehicle = document.getElementById("vehicle").value;
+
+    let message =
+`🚖 New Cab Booking Enquiry
+
+👤 Name: ${name}
+📞 Mobile: ${mobile}
+📍 Pickup: ${pickup}
+📍 Drop: ${drop}
+📅 Date: ${date}
+🚗 Vehicle: ${vehicle}
+
+Please contact me regarding this booking.`;
+
+    let whatsappURL =
+    "https://wa.me/917028706290?text=" +
+    encodeURIComponent(message);
+
+    window.open(whatsappURL, "_blank");
+
+});
+</script>
+</body>
+</html>

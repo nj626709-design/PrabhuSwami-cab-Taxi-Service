@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://prabhuswamicabtaxiservice.com/sitemap.xml
+Sitemap: https://www.prabhuswamicabtaxiservice.com/sitemap.xml

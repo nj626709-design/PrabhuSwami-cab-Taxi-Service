@@ -323,6 +323,104 @@ ul.features li{
     border-radius:10px;
 }
 
+.google-reviews {
+    background: #f8f8f8;
+}
+
+.review-label {
+    color: #f5b400;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.google-rating {
+    max-width: 450px;
+    margin: 0 auto 40px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.rating-number {
+    font-size: 55px;
+    font-weight: 700;
+    color: #111;
+}
+
+.stars {
+    color: #f5b400;
+    font-size: 24px;
+    letter-spacing: 3px;
+}
+
+.google-rating p {
+    margin: 5px 0 0;
+    color: #666;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.review-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.review-card p {
+    margin: 15px 0 20px;
+    color: #555;
+}
+
+.review-source {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #555;
+}
+
+.review-source span {
+    color: #4285F4;
+    font-size: 20px;
+}
+
+.review-buttons {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.google-review-btn,
+.view-reviews-btn {
+    display: inline-block;
+    padding: 14px 25px;
+    margin: 8px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.google-review-btn {
+    background: #f5b400;
+    color: #111;
+}
+
+.view-reviews-btn {
+    background: #111;
+    color: #fff;
+}
+
 .contact{
     background:#111;
     color:#fff;
@@ -713,6 +811,77 @@ Serving Mumbai, Navi Mumbai, Pune, Nashik, Chhatrapati Sambhajinagar and nearby 
 
 </div>
 
+</section>
+
+<section class="section google-reviews">
+    <div class="container">
+
+        <div class="section-title">
+            <span class="review-label">GOOGLE REVIEWS</span>
+            <h2>What Our Customers Say</h2>
+            <p>
+                Trusted by customers for comfortable, reliable and professional
+                taxi services across Maharashtra.
+            </p>
+        </div>
+
+        <div class="google-rating">
+            <div class="rating-number">4.9</div>
+
+            <div>
+                <div class="stars">★★★★★</div>
+                <p>Based on 34 Google Reviews</p>
+            </div>
+        </div>
+
+        <div class="review-grid">
+
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    Well maintained cars, local well behaved drivers,
+                    wonderful experience.
+                </p>
+
+                <div class="review-source">
+                    <strong>Google Review</strong>
+                    <span>✓</span>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+
+                <p>
+                    Nice service, good experience.
+                </p>
+
+                <div class="review-source">
+                    <strong>Google Review</strong>
+                    <span>✓</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="review-buttons">
+    <a href="https://g.page/r/CQGUA2c3S6tVEAE/review"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="google-review-btn">
+       ★ Write a Google Review
+    </a>
+
+    <a href="https://www.google.com/search?q=Prabhuswami+Tours+and+Travel+Cab+%26+Taxi+services+Navi+Mumbai+reviews"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="view-reviews-btn">
+       View All Google Reviews
+    </a>
+</div>
+
+    </div>
 </section>
 
 <section id="contact" class="section contact">

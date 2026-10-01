@@ -1,0 +1,25 @@
+PRABHUSWAMI PHOTO/VIDEO GALLERY SETUP
+
+Files:
+- index-gallery.html: updated homepage with public gallery section
+- admin.html: client login, upload, list, and delete interface
+- gallery-policies.sql: storage policies to run in Supabase SQL Editor
+
+BEFORE DEPLOYING
+1. In Supabase, open Project Settings / API (or API Keys) and copy the Project URL and publishable key.
+2. In BOTH index-gallery.html and admin.html, replace:
+   YOUR_SUPABASE_PROJECT_URL
+   YOUR_SUPABASE_PUBLISHABLE_KEY
+   Use the publishable key (or legacy anon key), NEVER a secret/service_role key.
+3. Open Supabase > Authentication > Users and copy the client account's User ID.
+4. In gallery-policies.sql, replace REPLACE_WITH_CLIENT_USER_UUID with that exact User ID, then run the SQL in Supabase SQL Editor.
+   This is important: the previous policies allowed every authenticated user to upload/delete. These policies restrict changes to the designated client account.
+5. Confirm the Storage bucket is public and its exact bucket ID/name is Gallery (case-sensitive). The code stores files inside a folder named gallery within that bucket.
+6. Upload index-gallery.html as index.html (replace your existing homepage after testing) and upload admin.html to the same website folder. Keep logo.png, Sedan.png, Ertiga.png and other existing assets alongside index.html.
+7. The client signs in at https://YOUR-DOMAIN/admin.html using the account created in Supabase.
+
+LIMITS / NOTES
+- Bucket file limit shown in your Supabase dashboard was 50 MB; the admin page enforces that limit.
+- The public gallery is a public gallery: anyone can view its media. Do not upload private/customer-sensitive content.
+- The public site needs the SELECT/list policy to list filenames; public bucket status alone permits viewing public object URLs but does not necessarily permit listing objects.
+- If you change the bucket ID, update GALLERY_BUCKET in both HTML files and the SQL policies.

@@ -303,7 +303,6 @@ ul.features li{
     font-weight:600;
 }
 
-/* Gallery */
 .website-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -315,10 +314,10 @@ ul.features li{
 .website-gallery video {
     width: 100%;
     height: 280px;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 15px;
     display: block;
-    background: #111;
+    background: transparent;
 }
 
 /* Tablet */
@@ -332,13 +331,11 @@ ul.features li{
 @media (max-width: 600px) {
     .website-gallery {
         grid-template-columns: 1fr;
-        gap: 18px;
     }
 
     .website-gallery img,
     .website-gallery video {
-        height: auto;
-        min-height: 250px;
+        height: 280px;
     }
 }
 

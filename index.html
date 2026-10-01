@@ -1026,7 +1026,7 @@ Please contact me regarding this booking.`;
 <!-- Gallery -->
 <script>
 const SUPABASE_URL = "https://pcfdoaxduotsamwytxkq.supabase.co";
-const SUPABASE_KEY = "sb_publishable_N04ai3TFEcUrKL1kCg_11w_PNWVi3za";
+const SUPABASE_KEY = "YOUR_PUBLISHABLE_KEY";
 
 const supabaseClient = supabase.createClient(
     SUPABASE_URL,
@@ -1042,7 +1042,7 @@ async function loadWebsiteGallery() {
     const { data, error } = await supabaseClient
         .storage
         .from("Gallery")
-        .list("gallery", {
+        .list("Gallery", {
             limit: 100,
             offset: 0,
             sortBy: {
@@ -1065,7 +1065,7 @@ async function loadWebsiteGallery() {
             supabaseClient
             .storage
             .from("Gallery")
-            .getPublicUrl("gallery/" + file.name);
+            .getPublicUrl("Gallery/" + file.name);
 
         const url = publicData.publicUrl;
 

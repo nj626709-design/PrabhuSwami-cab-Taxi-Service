@@ -303,6 +303,22 @@ ul.features li{
     font-weight:600;
 }
 
+.website-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.website-gallery img,
+.website-gallery video {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+    background: #111;
+}
+
 .why{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -754,6 +770,22 @@ Serving Mumbai, Navi Mumbai, Pune, Nashik, Chhatrapati Sambhajinagar and nearby 
 
 </section>
 
+<section class="section" id="gallery">
+    <div class="container">
+
+        <div class="section-title">
+            <span class="review-label">OUR GALLERY</span>
+            <h2>Photos & Videos</h2>
+            <p>Explore our latest cab services, vehicles and customer experiences.</p>
+        </div>
+
+        <div id="websiteGallery" class="website-gallery">
+            <p>Loading gallery...</p>
+        </div>
+
+    </div>
+</section>
+
 <section class="section" style="background:#f8f8f8;">
 <div class="container">
 
@@ -967,5 +999,83 @@ Please contact me regarding this booking.`;
 
 });
 </script>
+
+<!-- Supabase -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<!-- Gallery -->
+<script>
+const SUPABASE_URL = "https://pcfdoaxduotsamwytxkq.supabase.co";
+const SUPABASE_KEY = "sb_publishable_N04ai3TFEcUrKL1kCg_11w_PNWVi3za";
+
+const supabaseClient = supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_KEY
+);
+
+async function loadWebsiteGallery() {
+
+    const gallery = document.getElementById("websiteGallery");
+
+    if (!gallery) return;
+
+    const { data, error } = await supabaseClient
+        .storage
+        .from("Gallery")
+        .list("gallery", {
+            limit: 100,
+            offset: 0,
+            sortBy: {
+                column: "created_at",
+                order: "desc"
+            }
+        });
+
+    if (error) {
+        console.error(error);
+        gallery.innerHTML = "<p>Gallery temporarily unavailable.</p>";
+        return;
+    }
+
+    gallery.innerHTML = "";
+
+    data.forEach(file => {
+
+        const { data: publicData } =
+            supabaseClient
+            .storage
+            .from("Gallery")
+            .getPublicUrl("gallery/" + file.name);
+
+        const url = publicData.publicUrl;
+
+        const isVideo =
+            file.metadata &&
+            file.metadata.mimetype &&
+            file.metadata.mimetype.startsWith("video/");
+
+        if (isVideo) {
+
+            const video = document.createElement("video");
+            video.src = url;
+            video.controls = true;
+            video.playsInline = true;
+
+            gallery.appendChild(video);
+
+        } else {
+
+            const image = document.createElement("img");
+            image.src = url;
+            image.alt = "PrabhuSwami Cab & Taxi Service";
+
+            gallery.appendChild(image);
+        }
+    });
+}
+
+loadWebsiteGallery();
+</script>
+
 </body>
 </html>

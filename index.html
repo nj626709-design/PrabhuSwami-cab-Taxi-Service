@@ -303,21 +303,43 @@ ul.features li{
     font-weight:600;
 }
 
+/* Gallery */
 .website-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    margin-top: 30px;
 }
 
 .website-gallery img,
 .website-gallery video {
     width: 100%;
     height: 280px;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 15px;
     display: block;
     background: #111;
-    object-fit: contain;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .website-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .website-gallery {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .website-gallery img,
+    .website-gallery video {
+        height: auto;
+        min-height: 250px;
+    }
 }
 
 .why{
